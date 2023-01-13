@@ -13,12 +13,15 @@
     <script>
       ReactDOM.render(
         React.DOM.h1(
-          {id: "my-heading"},
-          React.DOM.span(null,
-            React.DOM.em(null, "Hell"),
-            "o "
-          ),
-          "World!"),
+          {
+            style: {
+              background: "black",
+              color: "white",
+              fontFamily: "Verdana",
+            }
+          },
+          "Hello world!"
+        ),
         document.getElementById("app")
       );
     </script>
