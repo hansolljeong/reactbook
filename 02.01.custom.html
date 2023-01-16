@@ -11,8 +11,15 @@
     <script src="react/build/react.js"></script>
     <script src="react/build/react-dom.js"></script>
     <script>
+      const Component = React.createClass({
+        render: function() {
+          return React.DOM.span(null, "My name is " + this.props.name);
+        }
+      });
       ReactDOM.render(
-        React.createElement("span", null, "Hello"),
+        React.createElement(Component, {
+          name: "Bob",
+        }),
         document.getElementById("app")
       );
     </script>
