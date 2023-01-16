@@ -11,16 +11,8 @@
     <script src="react/build/react.js"></script>
     <script src="react/build/react-dom.js"></script>
     <script>
-      let Component = React.createClass({
-        render: function() {
-          return React.DOM.span(null, "I'm so custom");
-        }
-      });
-
-      let ComponentFactory = React.createFactory(Component);
-
       ReactDOM.render(
-        ComponentFactory(),
+        React.createElement("span", null, "Hello"),
         document.getElementById("app")
       );
     </script>
